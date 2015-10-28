@@ -131,9 +131,9 @@ public class CreditCardDao {
 	
 	public List<Transaction> getTransactionsSolrQuery(String ccNo, String note) {
 		
-		String query = "select * from " + latestTransactionTable + " where cc_no = '" + ccNo + "' and  solr_query = '{\"q\":\"notes:"
-				+ note.replace(" ", "+") + "\", \"fq\":\"cc_no:" + ccNo +"\", \"fq\":\"notes:"
-				+ note.replace(" ", "+") + "\", \"distrib.singlePass\": true}';";
+		String query = "select * from " + latestTransactionTable + " where cc_no = '" + ccNo + "' and  solr_query = '{\"q\":\"notes:*"
+				+ note.replace(" ", "+") + "*\", \"fq\":\"cc_no:" + ccNo +"\", \"fq\":\"notes:*"
+				+ note.replace(" ", "+") + "*\", \"distrib.singlePass\": true}';";
 			
 		ResultSet resultSet = this.session.execute(query);		
 		List<Transaction> transactions = new ArrayList<Transaction>();

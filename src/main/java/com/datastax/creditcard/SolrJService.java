@@ -26,7 +26,7 @@ public class SolrJService implements SearchService {
 
 		SolrQuery query = new SolrQuery();
 		query.set("q", "cc_no:" + ccNo);
-		query.add("fq", "notes:\"" + search + "\"");
+		query.add("fq", "notes:\"*" + search + "*\"");
 		query.add("distrib.singlePass", "true");
 
 		QueryResponse response;
