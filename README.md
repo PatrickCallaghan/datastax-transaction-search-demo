@@ -3,6 +3,16 @@ Transaction Search Demo
 
 This requires DataStax Enterprise running in Solr mode.
 
+This demo shows 3 ways to search transactions in a users account. In this demo we will presume that users can enter notes for each transaction on their account and then they will want to search by some or all of these notes.
+
+The 3 different ways of querying will be 
+1. SolrJ
+
+2. CQL using a partition restriction and the solr_query clause
+
+3. CQL using a partition restriction and searching the transactions in java code from the client.
+
+
 To create the schema, run the following
 
 	mvn clean compile exec:java -Dexec.mainClass="com.datastax.demo.SchemaSetup"
