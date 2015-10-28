@@ -1,6 +1,8 @@
 Transaction Search Demo
 ========================
 
+This requires DataStax Enterprise running in Solr mode.
+
 To create the schema, run the following
 
 	mvn clean compile exec:java -Dexec.mainClass="com.datastax.demo.SchemaSetup"
@@ -23,7 +25,7 @@ To run the requests run the following
 	
 To change the no of requests add the following
 
-	-DnoOfRequests=100000	
+	-DnoOfRequests=100000 -DnoOfCreditCards=1000000	
 	
 To remove the tables and the schema, run the following.
 
