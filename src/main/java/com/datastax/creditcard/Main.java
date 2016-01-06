@@ -71,7 +71,7 @@ public class Main {
 
 		// create time by adding a random no of seconds to the midnight of
 		// yesterday.
-		date = date.plusSeconds(new Double(Math.random() * 100).intValue());
+		date = date.plusMillis(new Double(Math.random() * 100).intValue());
 
 		Transaction transaction = new Transaction();
 		createItemsAndAmount(noOfItems, transaction);
