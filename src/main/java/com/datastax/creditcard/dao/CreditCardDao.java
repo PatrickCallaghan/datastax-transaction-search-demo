@@ -108,7 +108,7 @@ public class CreditCardDao {
 		t.setMerchant(row.getString("merchant"));
 		t.setLocation(row.getString("location"));
 		t.setTransactionId(row.getString("transaction_id"));
-		t.setTransactionTime(row.getDate("transaction_time"));
+		t.setTransactionTime(row.getTimestamp("transaction_time"));
 		t.setUserId(row.getString("user_id"));
 		t.setNotes(row.getString("notes"));
 		t.setStatus(row.getString("status"));
